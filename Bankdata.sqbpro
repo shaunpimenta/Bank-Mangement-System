@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:\Users\Shaun\Desktop\PBL Mineral\Bank Mangement\Bankdata.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="150"/><column_width id="3" width="2043"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,7:mainBalance"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Balance" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort><column index="2" mode="0"/></sort><column_widths><column index="1" value="61"/><column index="2" value="90"/><column index="3" value="86"/><column index="4" value="109"/><column index="5" value="92"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Customers" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="61"/><column index="2" value="73"/><column index="3" value="79"/><column index="4" value="121"/><column index="5" value="90"/><column index="6" value="109"/><column index="7" value="94"/><column index="8" value="84"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Transact" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="90"/><column index="2" value="117"/><column index="3" value="91"/><column index="4" value="111"/><column index="5" value="95"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">drop table Balance;
+-- create table Transact(&quot;Time&quot; datetime,&quot;CardNo&quot;	REAL NOT NULL,
+-- 	&quot;TransType&quot;	TEXT,
+-- 	&quot;Amount&quot;	NUMERIC,
+-- 	&quot;BalBefore&quot;	NUMERIC,
+-- 	&quot;BalAfter&quot;	NUMERIC
+-- );
+-- SELECT * from Transact
+create table Balance(
+	&quot;Time&quot;	datetime,
+	&quot;id&quot;	INTEGER,
+	&quot;CardNo&quot;	REAL NOT NULL UNIQUE,
+	&quot;deposit&quot;	NUMERIC,
+	&quot;withdraw&quot;	NUMERIC,
+	&quot;Balance&quot;	NUMERIC,
+	PRIMARY KEY(&quot;id&quot;)
+);</sql><current_tab id="0"/></tab_sql></sqlb_project>
