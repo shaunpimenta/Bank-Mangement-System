@@ -1,10 +1,32 @@
 import sqlite3
 import random
 import pandas as pd
+import numpy as np
+import tkinter as tk
+from tkinter import messagebox
+from time import gmtime, strftime
 import math
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
 import datetime
+
+def checknumber(s):
+    try:
+        float(s)
+        return 1
+    except ValueError:
+        print("ValueError")
+        return 0
+
+def checkaccnmb(num):
+	try:
+		fpin=open(num+".txt",'r')
+	except FileNotFoundError:
+		messagebox.showinfo("Error","Invalid Credentials!\nTry Again!")
+		return 0
+	fpin.close()
+	return 0
+
 def cardgenerator(n):
     digits = [i for i in range(0, 10)]
     r = ""
